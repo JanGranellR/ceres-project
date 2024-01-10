@@ -1,0 +1,10 @@
+version: "3"
+services:
+  ceres-project:
+    container_name: ceres-project
+    image: ghcr.io/jangranellr/ceres-project:latest
+    volumes:
+      - ./data/models:/app/data/models:ro
+    ports:
+      - 7860:7860
+    restart: always
