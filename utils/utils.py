@@ -134,3 +134,38 @@ def copy_path(p: str = None, d: str = None) -> bool:
     except Exception as e:
         print(f"[ERROR] Folder {p} was not copied to {d}")
         return False
+
+def delete_files(f: list[str] = None) -> bool:
+    """Deletes one or more files.
+
+    Parameters:
+    - f (List[str]): A list of files to delete. If not specified, no files will be deleted.
+
+    Returns:
+    - bool: True if all files were successfully deleted, False otherwise.
+    """
+
+    # Check if the list is not specified
+    if f == None:
+        print("[INFO] No files specified")
+        return False
+
+    # Convert single string to list
+    if type(f) == "str":
+        f = [f]
+    
+    # Try to delete the files
+    try:
+        for file in f:
+            if os.path.exists(file):
+                os.remove(file)
+                print(f"[INFO] File {file} deleted successfully")
+            else:
+                print(f"[INFO] File {file} does not exist")
+    
+        print("[INFO] Files deleted successfully")
+        return True
+    
+    except Exception as e:
+        print("[ERROR] Files were not deleted")
+        return False

@@ -3,6 +3,7 @@ dataset = {
     "path": "./data",
     "path_raw": "raw",
     "path_processed": "processed",
+    "path_fastdup": "fastdup",
     "classes": ["macarrones", "pizza", "tiramisu"],
     "classes_keywords": {
         "macarrones": [
@@ -86,5 +87,8 @@ dataset = {
         ]
     },
     "classes_num_images": 500,
-    "classes_images_extension": "jpg"
+    "classes_images_extension": "jpg",
+    "fastdup": {
+        "export": True,
+    }
 }
