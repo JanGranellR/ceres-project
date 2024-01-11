@@ -4,6 +4,8 @@ dataset = {
     "path_raw": "raw",
     "path_processed": "processed",
     "path_fastdup": "fastdup",
+    "path_training": "train",
+    "path_test": "test",
     "classes": ["macarrones", "pizza", "tiramisu"],
     "classes_keywords": {
         "macarrones": [
@@ -88,6 +90,7 @@ dataset = {
     },
     "classes_num_images": 500,
     "classes_images_extension": "jpg",
+    "classes_images_split_ratio": 0.8,
     "fastdup": {
         "export": True,
     }
