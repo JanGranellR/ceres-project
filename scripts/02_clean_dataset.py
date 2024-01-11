@@ -121,7 +121,7 @@ def remove_wrong_extensions() -> None:
         # Iterate through and remove images with the wrong extension
         for file in os.listdir(os.path.join(config.dataset["path"], config.dataset["path_processed"], class_name)):
             if not file.endswith(config.dataset["classes_images_extension"]):
-                os.remove(os.path.join(config.dataset["path"], config.dataset["path_raw"], class_name, file))
+                os.remove(os.path.join(config.dataset["path"], config.dataset["path_processed"], class_name, file))
 
         print(f"[INFO] Removing images with the wrong extension for {class_name} has successfully finished")
 
