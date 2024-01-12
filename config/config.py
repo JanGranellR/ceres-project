@@ -88,10 +88,18 @@ dataset = {
             "foto tiramisu"
         ]
     },
-    "classes_num_images": 500,
+    "classes_num_images": 1500,
     "classes_images_extension": "jpg",
-    "classes_images_split_ratio": 0.8,
+    "classes_images_split_ratio": 0.95,
     "fastdup": {
         "export": True,
     }
+}
+
+# Model configuration
+model = {
+    "path": "./data",
+    "path_models": "models",
+    "path_classes": "./data/processed",
+    "name": "svc_model.joblib"
 }
